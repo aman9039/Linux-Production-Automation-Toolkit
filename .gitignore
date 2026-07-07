@@ -1,0 +1,13 @@
+# Vim temporary files
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+
+# Backup files
+backup/
+
+# Reports (if generated automatically)
+reports/
