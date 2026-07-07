@@ -149,6 +149,60 @@ service_check() {
     echo
 }
 
+log_check() {
+
+    echo
+    echo "========== LOG ANALYZER =========="
+    echo
+
+    echo "Report Generated : $(date)"
+
+    echo
+
+    echo "Last 20 Logs"
+
+    journalctl --no-pager -n 20
+
+    echo
+
+    echo "Searching ERROR..."
+
+    journalctl | grep ERROR
+
+    echo
+
+    echo "Searching WARNING..."
+
+    journalctl | grep WARNING
+
+    echo
+
+    echo "Searching FAILED..."
+
+    journalctl | grep FAILED
+
+    echo
+
+    echo "========== SSH LOGS =========="
+
+    journalctl --no-pager -u sshd -n 20
+
+    echo
+
+    echo "========== DOCKER LOGS =========="
+
+    journalctl -no-pager -u docker -n 20
+
+    echo
+
+    journalctl -no-pager -n 50 > reports/log_report.txt
+
+    echo "Report saved successfully."
+
+}
+
+
+
 echo "===================================="
 echo " Linux Production Automation Toolkit "
 echo "===================================="
@@ -158,7 +212,8 @@ echo "2.Disk Usage"
 echo "3.Memory Usage"
 echo "4.CPU Usage"
 echo "5.service status"
-echo "6.Exit"
+echo "6.Log Analyzer"
+echo "7.Exit"
 echo
 
 read -p "Enter your choice (1-6): " choice
@@ -179,6 +234,10 @@ case $choice in
     5)
         service_check
         ;;
+    6)
+        log_check
+        ;;
+	
     *)
         echo "Invalid Choice!"
         ;;

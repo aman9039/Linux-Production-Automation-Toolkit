@@ -37,38 +37,3 @@ service_check() {
     echo
 }
 
-echo "===================================="
-echo " Linux Production Automation Toolkit "
-echo "===================================="
-echo
-echo "1.Health Check"
-echo "2.Disk Usage"
-echo "3.Memory Usage"
-echo "4.CPU Usage"
-echo "5.service status"
-echo "6.Exit"
-echo
-
-read -p "Enter your choice (1-6): " choice
-
-case $choice in
-     1)
-        health_check
-        ;;
-     2)
-        disk_check
-        ;;
-    3)
-        memory_check
-        ;;
-    4)
-        cpu_check
-        ;;
-    5)
-        service_check
-        ;;
-    *)
-        echo "Invalid Choice!"
-        ;;
-esac
-
