@@ -8,6 +8,7 @@ source modules/service_monitor.sh
 source modules/network_monitor.sh
 source modules/logs_monitor.sh
 source modules/network_monitor.sh
+source modules/security_monitor.sh
 
 while true
 do	
@@ -22,10 +23,11 @@ echo "4.CPU Usage"
 echo "5.service status"
 echo "6.Log Analyzer"
 echo "7.Network Monitor"
-echo "8.Exit"
+echo "8.Security Monitoring"
+echo "9.Exit"
 echo
 
-read -p "Enter your choice (1-8): " choice
+read -p "Enter your choice (1-9): " choice
 
 case $choice in
     1)
@@ -41,8 +43,10 @@ case $choice in
     6)
         log_check ;;
     7)
-        network_check ;;	    
-    8)  
+        network_check ;;
+    8)
+       security_check ;;	    
+    9)  
         echo "Exiting Toolkit..."
         exit 0
         ;;	    
