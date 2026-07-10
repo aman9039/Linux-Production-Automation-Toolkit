@@ -9,6 +9,9 @@ source modules/network_monitor.sh
 source modules/logs_monitor.sh
 source modules/network_monitor.sh
 source modules/security_monitor.sh
+source modules/backup_monitor.sh
+
+
 
 while true
 do	
@@ -24,7 +27,8 @@ echo "5.service status"
 echo "6.Log Analyzer"
 echo "7.Network Monitor"
 echo "8.Security Monitoring"
-echo "9.Exit"
+echo "9.Backup and Cleanup"
+echo "10.Exit"
 echo
 
 read -p "Enter your choice (1-9): " choice
@@ -45,13 +49,15 @@ case $choice in
     7)
         network_check ;;
     8)
-       security_check ;;	    
-    9)  
-        echo "Exiting Toolkit..."
-        exit 0
-        ;;	    
+        security_check ;;
+    9)
+        backup_check ;;	    
+    10)  
+         echo "Exiting Toolkit..."
+         exit 0
+         ;;	    
     *)
-        echo "Invalid Choice!"
-        ;;
+         echo "Invalid Choice!"
+         ;;
 esac
 done
