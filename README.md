@@ -16,6 +16,7 @@ This project helps automate common production server activities such as health m
 * Security Monitoring and User Activity Checks
 * Backup and Cleanup Automation
 * Interactive Menu Driven Toolkit
+* User monitoring
 
 ## Project Structure
 
@@ -33,7 +34,9 @@ Linux-Production-Automation-Toolkit/
 │   ├── security_monitor.sh
 │   ├── disk_monitor.sh
 │   ├── memory_monitor.sh
+|   ├── user_monitoring
 │   └── service_monitor.sh
+
 │
 ├── logs/
 ├── reports/
@@ -140,7 +143,7 @@ Run the toolkit:
 7.Network Monitor
 8.Security Monitoring
 9.Backup and Cleanup
-10.User Management
+10.User Monitoring
 11.Exit
 
 ```
