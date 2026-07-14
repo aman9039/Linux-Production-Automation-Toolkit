@@ -80,6 +80,12 @@ Tracks user login activity, authentication events and basic security-related inf
 
 Automates backup verification and cleanup activities to improve operational reliability.
 
+### User Monitoring
+
+user monitoring and reporting 
+
+
+
 ## Technologies Used
 
 * Bash Scripting
@@ -125,13 +131,18 @@ Run the toolkit:
  Linux Production Automation Toolkit
 ====================================
 
-1. Health Check
-2. Disk Usage
-3. Memory Usage
-4. CPU Usage
-5. Service Status
-6. Log Analyzer
-7. Exit
+1.Health Check
+2.Disk Usage
+3.Memory Usage
+4.CPU Usage
+5.service status
+6.Log Analyzer
+7.Network Monitor
+8.Security Monitoring
+9.Backup and Cleanup
+10.User Management
+11.Exit
+
 ```
 
 ## Learning Outcomes
